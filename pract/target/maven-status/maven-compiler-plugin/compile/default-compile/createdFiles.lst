@@ -1,0 +1,9 @@
+com\example\pract\PatientGenerator.class
+com\example\pract\SecurityConfig.class
+com\example\pract\PatientApiClient.class
+com\example\pract\PatientService.class
+com\example\pract\SwaggerConfig.class
+com\example\pract\Patient.class
+com\example\pract\PatientController.class
+com\example\pract\PatientRepository.class
+com\example\pract\PractApplication.class

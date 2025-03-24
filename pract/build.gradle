@@ -1,0 +1,46 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.4'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	jcenter()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final'
+	// https://mvnrepository.com/artifact/javax.validation/validation-api
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+	
+	// Database
+	implementation 'org.postgresql:postgresql:42.6.0'
+	
+	// Swagger/OpenAPI dependencies
+	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+	implementation 'io.swagger.core.v3:swagger-annotations:2.2.20'
+	
+	// JavaFaker for generating test data
+	implementation 'com.github.javafaker:javafaker:1.0.2'
+	
+	// Snake YAML
+	implementation 'org.yaml:snakeyaml:1.33'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+test {
+	useJUnitPlatform()
+}

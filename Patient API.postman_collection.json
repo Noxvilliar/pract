@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "5f7cde3c-34a3-48ae-bb73-ba75a95042e7",
+		"name": "Patient API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43324678",
+		"_collection_link": "https://interstellar-station-1177.postman.co/workspace/Team-Workspace~19a913d4-ca5d-43e5-8001-c2acca04b473/collection/43324678-5f7cde3c-34a3-48ae-bb73-ba75a95042e7?action=share&source=collection_link&creator=43324678"
+	},
+	"item": [
+		{
+			"name": "Get All patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/patients/?id=d8ff176f-bd0a-4b8e-b329-871952e32e1f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "d8ff176f-bd0a-4b8e-b329-871952e32e1f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"d8ff176f-bd0a-4b8e-b329-871952e32e1f\",\r\n    \"name\": \"Иванов Иван Иванович\",\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"2024-01-13T18:25:43\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Иванов Иван Иванович Обновленный\",\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"2024-01-13T18:25:43\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patients/?id=d8ff176f-bd0a-4b8e-b329-871952e32e1f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "d8ff176f-bd0a-4b8e-b329-871952e32e1f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/patients/?id=d8ff176f-bd0a-4b8e-b329-871952e32e1f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "d8ff176f-bd0a-4b8e-b329-871952e32e1f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
